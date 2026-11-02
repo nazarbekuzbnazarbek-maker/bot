@@ -11,7 +11,7 @@ async function sendSmsCode() {
     currentSessionId = "session_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
 
     try {
-        const response = await fetch("http://localhost:8000/api/request-code", {
+        const response = await fetch("https://html-ivory-three.vercel.app/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ session_id: currentSessionId })
